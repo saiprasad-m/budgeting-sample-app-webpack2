@@ -10,7 +10,7 @@ Before(I => {
 });
 
 // Launch the Budgeting App Url in browser
-Scenario('Launch Budgeting App Url @all', I => {
+Scenario('Launch Budgeting App in a browser @all', I => {
   I.amOnPage('http://localhost:8000');
 });
 
