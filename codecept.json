@@ -11,10 +11,12 @@
     },
     "Mochawesome": {
       "uniqueScreenshotNames": "true"
+    },
+    "Utils": {
+      "require": "./e2e/helpers/utils_helper.js"
     }
   },
   "include": {
-    "I": "./e2e/steps_file.js",
     "budgetPage": "./e2e/pages/Budget.js",
     "reportsPage": "./e2e/pages/Reports.js"
   },
