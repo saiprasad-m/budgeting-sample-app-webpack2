@@ -1,0 +1,492 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 12,
+    "passes": 11,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-09-20T18:45:29.167Z",
+    "end": "2018-09-20T18:46:25.322Z",
+    "duration": 56155,
+    "testsRegistered": 12,
+    "passPercent": 91.7,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "a548ec5c-c868-4bd4-bc4c-25e2e879b347",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "23eb92d8-c03f-4cab-89b1-89f4c4578841",
+        "title": "Budgeting App Testplan - Budgeting Testcases",
+        "fullFile":
+          "C:\\Users\\SaiPrasad\\Projects\\budgeting-sample-app-webpack2\\e2e\\budget_test.js",
+        "file": "\\e2e\\budget_test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook: codeceptjs.beforeSuite",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases \"before all\" hook: codeceptjs.beforeSuite",
+            "timedOut": false,
+            "duration": 1926,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.suiteSetup(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8d7a3876-e216-41c9-9c5d-0fa6155825d4",
+            "isHook": true,
+            "skipped": false
+          },
+          {
+            "title": "\"before each\" hook: codeceptjs.before",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases \"before each\" hook: codeceptjs.before",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.setup(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "abf1608b-93f8-4d8b-822a-e31e1c4ac8c9",
+            "isHook": true,
+            "skipped": false
+          },
+          {
+            "title": "\"before each\" hook: Before",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases \"before each\" hook: Before",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code":
+              "// or Background\n// I.say('The Budgeting App is currently served via nodejs/webpack & tested using codecptjs');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "b3354523-5de1-4239-afa0-7ac7d5567314",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook: codeceptjs.afterSuite",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases \"after all\" hook: codeceptjs.afterSuite",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.suiteTeardown(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "384ae167-ae12-4f87-ad7b-42579fee2c38",
+            "isHook": true,
+            "skipped": false
+          },
+          {
+            "title": "\"after each\" hook: finalize codeceptjs",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases \"after each\" hook: finalize codeceptjs",
+            "timedOut": false,
+            "duration": 506,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.teardown(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "f416694b-3659-40fa-8427-33390e99b74b",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "Launch Budgeting App Url @all",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Launch Budgeting App Url @all",
+            "timedOut": false,
+            "duration": 8179,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "I.amOnPage('http://localhost:8000');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "51142264-0d4f-4e3d-a07e-bff3d423733f",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title":
+              "Navigate to Budgeting App and verify elements in default Budget tab @all",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Navigate to Budgeting App and verify elements in default Budget tab @all",
+            "timedOut": false,
+            "duration": 74,
+            "state": "passed",
+            "speed": "medium",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "budgetPage.checkThePage();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2dfca380-d2e1-4dfe-8693-314c6d9ca187",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Check the UI elements of Budgeting table @all",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Check the UI elements of Budgeting table @all",
+            "timedOut": false,
+            "duration": 91,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "budgetPage.checkTableInPage();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "a258185f-788f-4a8b-ad55-a3a3f48b956c",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Check the UI elements of Working Balance section @all",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Check the UI elements of Working Balance section @all",
+            "timedOut": false,
+            "duration": 40,
+            "state": "passed",
+            "speed": "medium",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "budgetPage.checkWorkingBalance();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "f8aa0743-2771-49e3-b476-4d2307e93c51",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title":
+              "Add catergories to Budgeting | {\"category\":\"Home\",\"description\":\"Home repairs\",\"value\":\"250\"}",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Add catergories to Budgeting | {\"category\":\"Home\",\"description\":\"Home repairs\",\"value\":\"250\"}",
+            "timedOut": false,
+            "duration": 6833,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code":
+              "// current!\nawait budgetPage.addCategory(current.category, current.description, current.value);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "180e255f-6366-4c68-b4f1-efa873dece3c",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title":
+              "Add catergories to Budgeting | {\"category\":\"Income\",\"description\":\"Extra hours\",\"value\":\"250\"}",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Add catergories to Budgeting | {\"category\":\"Income\",\"description\":\"Extra hours\",\"value\":\"250\"}",
+            "timedOut": false,
+            "duration": 6854,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code":
+              "// current!\nawait budgetPage.addCategory(current.category, current.description, current.value);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "09e222a8-8e8e-441b-a478-4e3962e390fa",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Calculate the Working Balance via script @all",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Calculate the Working Balance via script @all",
+            "timedOut": false,
+            "duration": 119,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const working = await budgetPage.calculateBalance();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "5d4aa538-ffd0-4106-a775-bbe73b1cfaaa",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title":
+              "Navigate to Budgeting App and verify elements under Reports @all",
+            "fullTitle":
+              "Budgeting App Testplan - Budgeting Testcases: Navigate to Budgeting App and verify elements under Reports @all",
+            "timedOut": false,
+            "duration": 12660,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "await budgetPage.checkReportPage();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "be43da30-8996-4ae6-abdf-66976f8942de",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "51142264-0d4f-4e3d-a07e-bff3d423733f",
+          "2dfca380-d2e1-4dfe-8693-314c6d9ca187",
+          "a258185f-788f-4a8b-ad55-a3a3f48b956c",
+          "f8aa0743-2771-49e3-b476-4d2307e93c51",
+          "180e255f-6366-4c68-b4f1-efa873dece3c",
+          "09e222a8-8e8e-441b-a478-4e3962e390fa",
+          "5d4aa538-ffd0-4106-a775-bbe73b1cfaaa",
+          "be43da30-8996-4ae6-abdf-66976f8942de"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 34850,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 0
+      },
+      {
+        "uuid": "9392672e-39df-418c-8b1a-4e48ed37f2a7",
+        "title": "Budgeting App Testplan - Reports Testcases",
+        "fullFile":
+          "C:\\Users\\SaiPrasad\\Projects\\budgeting-sample-app-webpack2\\e2e\\reports_test.js",
+        "file": "\\e2e\\reports_test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook: codeceptjs.beforeSuite",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases \"before all\" hook: codeceptjs.beforeSuite",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.suiteSetup(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "3494254c-299f-4c7d-8f8f-b1ac67a02763",
+            "isHook": true,
+            "skipped": false
+          },
+          {
+            "title": "\"before each\" hook: codeceptjs.before",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases \"before each\" hook: codeceptjs.before",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.setup(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "3b26f184-cb18-4c34-a502-4d2622241832",
+            "isHook": true,
+            "skipped": false
+          },
+          {
+            "title": "\"before each\" hook: Before",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases \"before each\" hook: Before",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code":
+              "// or Background\n// I.say('The Budgeting App is currently served via nodejs/webpack');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "19b0644d-ebb3-4812-93c9-0fe24fa6ff1a",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook: codeceptjs.afterSuite",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases \"after all\" hook: codeceptjs.afterSuite",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.suiteTeardown(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "216fa604-f81b-4562-a441-0f67690659a3",
+            "isHook": true,
+            "skipped": false
+          },
+          {
+            "title": "\"after each\" hook: finalize codeceptjs",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases \"after each\" hook: finalize codeceptjs",
+            "timedOut": false,
+            "duration": 507,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "scenario.teardown(suite)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "08019b38-d2e8-4d6f-8b06-5b66fb87ae6c",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title":
+              "Navigate to Budgeting App and verify elements in Reports tab @all",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases: Navigate to Budgeting App and verify elements in Reports tab @all",
+            "timedOut": false,
+            "duration": 94,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "reportsPage.checkTheReportsPage();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "04e474ba-fc99-420c-b118-01aa830d716d",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Check the UI elements of Inflow vs Outflow charts @all",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases: Check the UI elements of Inflow vs Outflow charts @all",
+            "timedOut": false,
+            "duration": 70,
+            "state": "passed",
+            "speed": "medium",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "reportsPage.checkInflowOutflowChartInPage();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "50a3a8b4-eeb9-4b3f-9a11-7b7f16d5575d",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title":
+              "Check the UI elements of Spending by Category charts @all",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases: Check the UI elements of Spending by Category charts @all",
+            "timedOut": false,
+            "duration": 12631,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "reportsPage.checkSoendingByCategoryChart();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "bad94d93-4d14-46be-81a5-64f9b6b7b2fd",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title":
+              "Failed Test intentionally done : Spending by Category charts @all",
+            "fullTitle":
+              "Budgeting App Testplan - Reports Testcases: Failed Test intentionally done : Spending by Category charts @all",
+            "timedOut": false,
+            "duration": 411,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "context":
+              "\"Failed_Tes_62f39659-674f-4485-987b-9650216d017e.failed.png\"",
+            "code": "I.seeElement('Element not found');",
+            "err": {
+              "message":
+                "Error: expected visible elements '[]' not to be empty",
+              "estack":
+                "expected visible elements '[]' not to be empty\n\nScenario Steps:\n\n- I.seeElement(\"Element not found\") at Test.I (e2e\\reports_test.js:35:5)\n\n",
+              "diff": ""
+            },
+            "isRoot": false,
+            "uuid": "62f39659-674f-4485-987b-9650216d017e",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "04e474ba-fc99-420c-b118-01aa830d716d",
+          "50a3a8b4-eeb9-4b3f-9a11-7b7f16d5575d",
+          "bad94d93-4d14-46be-81a5-64f9b6b7b2fd"
+        ],
+        "failures": ["62f39659-674f-4485-987b-9650216d017e"],
+        "pending": [],
+        "skipped": [],
+        "duration": 13206,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 0
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 0
+  },
+  "copyrightYear": 2018
+}
