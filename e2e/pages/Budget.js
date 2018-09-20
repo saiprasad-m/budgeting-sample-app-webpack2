@@ -1,4 +1,3 @@
-'use strict';
 let I;
 let urllinks;
 let cattable;
@@ -7,7 +6,6 @@ let catbalance;
 let budgetFrag;
 
 budgetFrag = {
-
   _init() {
     I = actor();
 
@@ -17,33 +15,30 @@ budgetFrag = {
       reports: { xpath: "//a[text()='Reports']" },
       logo: { xpath: "//img[@alt='Modus Create']" },
       inflowoutflow: { xpath: "//div/a[text()='Inflow vs Outflow']" },
-      spending: { xpath: "//div/a[text()='Spending by Category']" }
+      spending: { xpath: "//div/a[text()='Spending by Category']" },
     };
 
-    // Locators for Budgeting table headers 
+    // Locators for Budgeting table headers
     cattable = {
-      category: { css: "table > thead > tr > th:nth-child(1)" },
-      description: { css: "table > thead > tr > th:nth-child(2)" },
-      amount: { css: "table > thead > tr > th:nth-child(3)" }
+      category: { css: 'table > thead > tr > th:nth-child(1)' },
+      description: { css: 'table > thead > tr > th:nth-child(2)' },
+      amount: { css: 'table > thead > tr > th:nth-child(3)' },
     };
 
     // Locators for category add form
     catform = {
-      category: { name: "categoryId" },
-      description: { name: "description" },
-      amount: { name: "value" },
-      add: { xpath: "//button[text()='Add']" }
-
+      category: { name: 'categoryId' },
+      description: { name: 'description' },
+      amount: { name: 'value' },
+      add: { xpath: "//button[text()='Add']" },
     };
 
     // Locators for working balance section
     catbalance = {
       inflow: { xpath: "//div[following-sibling::div[contains(., 'Total Inflow')]]" },
       outflow: { xpath: "//div[child::div[contains(., 'Total Outflow')]]" },
-      working: { xpath: "//div[child::div[contains(., 'Working Balance')]]" }
+      working: { xpath: "//div[child::div[contains(., 'Working Balance')]]" },
     };
-
-
   },
 
   // insert methods here for Budget page fragment
@@ -68,7 +63,7 @@ budgetFrag = {
 
   // Function used to add category using Data table
   addCategory(cat, desc, val) {
-    I.fillField(catform.category, cat); 
+    I.fillField(catform.category, cat);
     I.fillField(catform.description, desc);
     I.fillField(catform.amount, val);
     I.wait(2);
@@ -90,27 +85,25 @@ budgetFrag = {
     let outflow;
     let working;
     let finalBalance;
-    var v1, v2, v0;
-    let assert = require('assert');
+    let v1, v2, v0;
+    const assert = require('assert');
     within(catbalance.working, async () => {
       inflow = await I.grabTextFrom(catbalance.inflow);
       outflow = await I.grabTextFrom(catbalance.outflow);
       working = await I.grabTextFrom(catbalance.working);
       finalBalance = [inflow, outflow[outflow.length - 1], working[working.length - 1]];
-      
+
       v0 = await I.stripFloat(finalBalance[0]);
       v1 = await I.stripFloat(finalBalance[1]);
       v2 = await I.stripFloat(finalBalance[2]);
-      console.log("lhs " +v0 + " " + v1 );
-      console.log("rhs " + v2);
-      assert((v0 - v1).toFixed(2) == v2, "Working balance tally and test passed");
+      console.log(`lhs ${v0} ${v1}`);
+      console.log(`rhs ${v2}`);
+      assert((v0 - v1).toFixed(2) == v2, 'Working balance tally and test passed');
       return finalBalance;
-
     });
 
     return finalBalance;
   },
-
 
   // Check the report page
   checkReportPage: async () => {
@@ -122,9 +115,7 @@ budgetFrag = {
     I.seeElement(urllinks.logo);
     I.dontSeeInCurrentUrl('/budget');
     I.wait(2);
-  }
-
+  },
 };
-
 
 module.exports = budgetFrag;
