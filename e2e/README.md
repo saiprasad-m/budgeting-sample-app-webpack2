@@ -37,15 +37,15 @@ by npm run codecept-test
 
 ### 'Budgeting App' Test Plan
 
-Test Case | Expected Result | Result | Related Comment | Automated 
-------------- | -------------- | ----- | ----- | ------
+Testcase Id | Test Case | Expected Result | Result | Related Comment | Automated 
+----------- | ------------- | -------------- | ----- | ----- | ------
 |*Budgeting App - Budget Tab testcases*| 
-Launch Budgeting App in a browser (http://localhost:8000/) | Page is launched and rendered and redirected to (http://localhost:8000/budget) and 2 tabs are seen _Budget_ and _Reports_ | :construction:  | |
-Click on *Budget* Tab  | A Table is displayed with Headers: Category, Description, Amount. A Summary of Total Inflow/Outflow and Working Balance is displayed in the lower half | :construction:  | |
-Add a category with relevant values: <br/><br/> _Category_: Misc<br/> _Descrption_: Miscellaneous expense<br/>_Value_: 1000, <br/><br/>Click _Add_ | New Category is updated in the list and the calculation reflects the new category addition | :construction:  | |
-Calculate the Working Balance from The Table | The Inflow amounts and Outflow amounts summed up from the table should be used to calculate the Working fund | :construction:  | |
-Traverse to *Reports* Tab | Two sub tabs "Inflow vs Outflow", "Spending by Category" and SVG images for reports are shown by default| :construction:  | |
-Update desktop client from a hardcoded URL server to a non hardcoded URL server (overrideServerUrl) | The URL should be updated and non hardcoded | :construction:  | |
+Tc01 | Launch Budgeting App in a browser (http://localhost:8000/) | Page is launched and rendered and redirected to (http://localhost:8000/budget) and 2 tabs are seen _Budget_ and _Reports_ | :construction:  | |
+Tc02 | Click on *Budget* Tab  | A Table is displayed with Headers: _Category_, _Description_, and _Amount_. A Summary of Total Inflow/Outflow and Working Balance is displayed in the lower half | :construction:  | |
+Tc03 | Add a category with relevant values: <br/><br/> _Category_: Misc<br/> _Description_: Miscellaneous expense<br/>_Value_: 1000, <br/><br/>Click _Add_ | New Category is updated in the list and the calculation reflects the new category addition | :construction:  | |
+Tc04 | Calculate the Working Balance from The Table | The Inflow amounts and Outflow amounts summed up from the table should be used to calculate the Working fund | :construction:  | |
+Tc05 | Traverse to *Reports* Tab | Two sub tabs _"Inflow vs Outflow"_ and _"Spending by Category"_ and SVG images for reports are shown by default| :construction:  | |
+Tc06 | Update desktop client from a hardcoded URL server to a non hardcoded URL server (overrideServerUrl) | The URL should be updated and non hardcoded | :construction:  | |
 
 
 ## Test Reports
