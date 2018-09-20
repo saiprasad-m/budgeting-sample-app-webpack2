@@ -1,0 +1,38 @@
+{
+  "output": "./e2e/reports",
+  "helpers": {
+    "Puppeteer": {
+      "url": "http://localhost:8000",
+      "show": true,
+      "restart": false,
+      "waitForNavigation": "networkidle0",
+      "waitForAction": 500,
+      "smartWait": 5000
+    },
+    "Mochawesome": {
+      "uniqueScreenshotNames": "true"
+    }
+  },
+  "include": {
+    "I": "./e2e/steps_file.js",
+    "budgetPage": "./e2e/pages/Budget.js",
+    "reportsPage": "./e2e/pages/Reports.js"
+  },
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "./e2e/reports"
+    }
+  },
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./e2e/*_test.js",
+  "timeout": 10000,
+  "name": "budgeting-sample-app-webpack2"
+}
