@@ -5,10 +5,11 @@ Prior to starting the installation of these libraries is necessary as a pre-requ
 
 The Project followed select few automation practises:
 
-1. Page object model for the Budget and Reports, 
-2. Test reports are rendered via mochawesome.
-3. Data table approach used to seed the test data for tests.
-4. Essential info about Test Automation: 
+1. Page object model for the Budget and Reports. 
+2. Data table approach used to seed the test data for tests.
+3. Helper or Util approach followed for calculating Working Balance via grabText api
+4. Test reports are rendered via mochawesome.
+5. Essential info about Test Automation: 
 
       Environment | Version
       ----------- | -------------
@@ -19,7 +20,7 @@ The Project followed select few automation practises:
       Puppeteer | v1.8.0
       Mochawesome | v3.0.3
 
-5. The Tests, Helpers, PageObjects are arranged in the following hierarchy
+6. The Tests, Helpers, PageObjects are arranged in the following hierarchy
  
  
       Test artefacts | Codebase Location
@@ -29,7 +30,7 @@ The Project followed select few automation practises:
       Test scripts  | e2e\budget_test.js, e2e\reports_test.js
       Reports (HTML)| e2e\reports
 
-6. CodeceptJs config file
+7. CodeceptJs config file
 
 
 ```json
@@ -82,7 +83,8 @@ npm install codeceptjs puppeteer mochawesome --save-dev
 ```
 
 #### One-time setup/configuration: to initialise codeceptjs codebase and create blank tests and reports folder
-###### PS: When prompted, place all files under e2e folder
+###### PS: 
+These commands are required to be use only once when creating empty tests. When prompted, appropriately place all files (defn, helper, test, page object, support object, etc.) under *e2e\* folder
 
 ```bash
 .\node_module\.bin\codeceptjs init
@@ -93,7 +95,9 @@ npm install codeceptjs puppeteer mochawesome --save-dev
 
 .\node_module\.bin\codeceptjs gpo
 
-.\node_module\.bin\codeceptjs gt
+.\node_module\.bin\codeceptjs go
+
+.\node_module\.bin\codeceptjs gh
 
 ```
 
@@ -102,13 +106,17 @@ npm install codeceptjs puppeteer mochawesome --save-dev
 ```bash
 .\node_module\.bin\codeceptjs run --steps --reporter mochawesome
 ```
-or you can also run the scripts after 
 
+**or** 
+
+you can also run the following commands in tandem (seperate cmd prompts) 
+
+Cmd prompt 1:
 ```bash 
 npm run prod
 ```
 
-by 
+Cmd prompt 2:
 ```bash
 npm run codecept-test
 ```
@@ -138,7 +146,7 @@ Tc04 | Failed Test intentionally done : Spending by Category charts | Failure do
 
 
 #### Test Reports
-Navigate to the following path after each execution for Test reports: 
+For viewing Test Reports in HTML format, navigate to the following path after each Test execution: 
   ```bash
    budgeting-sample-app-webpack2/e2e/reports/mochawesome.html
   ```
