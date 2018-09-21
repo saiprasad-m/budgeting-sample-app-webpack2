@@ -6,6 +6,7 @@ static
 _nogit
 build
 coverage
+e2e/reports
 *.report.dom.html
 /dll
 .idea
