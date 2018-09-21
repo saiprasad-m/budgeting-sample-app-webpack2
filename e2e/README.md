@@ -3,7 +3,7 @@
 These tests are being implemented using codeceptJs, puppeteer and mochawesome node modules.
 Prior to starting the installation of these libraries is necessary as a pre-requisite. 
 
-The Project followed select few automation practises:
+The Project followed select few automation practices:
 
 1. Page object model for the Budget and Reports. 
 2. Data table approach used to seed the test data for tests.
