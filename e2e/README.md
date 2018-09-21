@@ -29,6 +29,51 @@ The Project followed select few automation practises:
       Test scripts  | e2e\budget_test.js, e2e\reports_test.js
       Reports (HTML)| e2e\reports
 
+6. CodeceptJs config file
+
+
+```json
+{
+  "output": "./e2e/reports",
+  "helpers": {
+    "Puppeteer": {
+      "url": "http://localhost:8000",
+      "show": true,
+      "restart": false,
+      "waitForNavigation": "networkidle0",
+      "waitForAction": 500,
+      "smartWait": 5000
+    },
+    "Mochawesome": {
+      "uniqueScreenshotNames": "true"
+    },
+    "Utils": {
+      "require": "./e2e/helpers/utils_helper.js"
+    }
+  },
+  "include": {
+    "budgetPage": "./e2e/pages/Budget.js",
+    "reportsPage": "./e2e/pages/Reports.js"
+  },
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "./e2e/reports"
+    }
+  },
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./e2e/*_test.js",
+  "timeout": 10000,
+  "name": "budgeting-sample-app-webpack2"
+}
+```
 
 #### Pre-requisite: Setup the npm modules using following command.
 
@@ -36,8 +81,8 @@ The Project followed select few automation practises:
 npm install codeceptjs puppeteer mochawesome --save-dev
 ```
 
-#### One time setup/configuration: to initialise and create blank tests and reports folder
-###### PS: WHen prompted, place all files under e2e folder
+#### One-time setup/configuration: to initialise codeceptjs codebase and create blank tests and reports folder
+###### PS: When prompted, place all files under e2e folder
 
 ```bash
 .\node_module\.bin\codeceptjs init
@@ -47,6 +92,8 @@ npm install codeceptjs puppeteer mochawesome --save-dev
 .\node_module\.bin\codeceptjs def
 
 .\node_module\.bin\codeceptjs gpo
+
+.\node_module\.bin\codeceptjs gt
 
 ```
 
