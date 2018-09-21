@@ -7,18 +7,27 @@ The Project followed select few automation practises:
 
 1. Page object model for the Budget and Reports, 
 2. Test reports are rendered via mochawesome.
-3. Data table approach used to seed the test data for the tests.
-4. Other essential info: 
+3. Data table approach used to seed the test data for tests.
+4. Essential info about Test Automation: 
 
-Environment | Version
------------ | -------------
-Tested on | Win8.1 SL 64bit 
-Node  | v8.12.0
-NPM  | v6.4.1
-CodeceptJs | v1.4.1
-Puppeteer | v1.8.0
-Mochawesome | v3.0.3
+      Environment | Version
+      ----------- | -------------
+      Tested on | Win8.1 SL 64bit 
+      Node  | v8.12.0
+      NPM  | v6.4.1
+      CodeceptJs | v1.4.1
+      Puppeteer | v1.8.0
+      Mochawesome | v3.0.3
+
+5. The Tests, Helpers, PageObjects are arranged in the following hierarchy
  
+ 
+      Test artefacts | Codebase Location
+      ----------- | -------------
+      Page Objects | e2e\Budget.js , e2e\Reports.js 
+      Helper / Utils  | e2e\utils_helper.js
+      Test scripts  | e2e\budget_test.js, e2e\reports_test.js
+      Reports (HTML)| e2e\reports
 
 
 #### Pre-requisite: Setup the npm modules using following command.
